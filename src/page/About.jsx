@@ -43,29 +43,29 @@ function About() {
   const [messageApi, contextHolder] = message.useMessage();
 
   return (
-    <div className='p-3' style={{minHeight:'500px'}}>
+    <div className='p-3 ' style={{minHeight:'500px'}}>
       {contextHolder}
       <Divider orientation="left"><Title>關於我</Title></Divider>
       <Row justify={'center'} align={'stretch'} className="m-3">
         <Col xs={{flex: '100%',}} xl={{flex: '30%',}}  className="p-2 m-3 d-flex justify-content-center align-items-center">
-            <Image size={200} className="border rounded" src='https://avatars.githubusercontent.com/u/77468739?v=4' />
+            <Image size={180} className="border rounded" src='https://avatars.githubusercontent.com/u/77468739?v=4' />
         </Col>
         <Col xs={{flex: '100%',}} xl={{flex: '60%',}} className=" d-flex align-items-center justify-content-center">
           <div>
           <Descriptions className="p-2 mt-3" title={<Title level={3}>個人資料</Title>}>
-            <Descriptions.Item labelStyle={{fontSize:'14pt'}} contentStyle={{fontSize:'14pt'}} label='中文姓名'>曾子航</Descriptions.Item>
-            <Descriptions.Item labelStyle={{fontSize:'14pt'}} contentStyle={{fontSize:'14pt'}} label='英文姓名'>Chan Zi Hang</Descriptions.Item>
-            <Descriptions.Item labelStyle={{fontSize:'14pt'}} contentStyle={{fontSize:'14pt'}} label="居住地">台灣</Descriptions.Item>
-            <Descriptions.Item labelStyle={{fontSize:'14pt'}} contentStyle={{fontSize:'14pt'}} label="國籍">馬來西亞</Descriptions.Item>
-            <Descriptions.Item labelStyle={{fontSize:'14pt'}} contentStyle={{fontSize:'14pt'}} label="學歷">國立成功大學資訊管理學系</Descriptions.Item>
-            <Descriptions.Item labelStyle={{fontSize:'14pt'}} contentStyle={{fontSize:'14pt'}} label="專長">前端工程師</Descriptions.Item>
-            <Descriptions.Item labelStyle={{fontSize:'14pt'}} contentStyle={{fontSize:'14pt'}} label="電郵">chanzihang0311@gmail.com</Descriptions.Item>
+            <Descriptions.Item labelStyle={{fontSize:'12pt'}} contentStyle={{fontSize:'12pt'}} label='中文姓名'>曾子航</Descriptions.Item>
+            <Descriptions.Item labelStyle={{fontSize:'12pt'}} contentStyle={{fontSize:'12pt'}} label='英文姓名'>Chan Zi Hang</Descriptions.Item>
+            <Descriptions.Item labelStyle={{fontSize:'12pt'}} contentStyle={{fontSize:'12pt'}} label="居住地">台灣</Descriptions.Item>
+            <Descriptions.Item labelStyle={{fontSize:'12pt'}} contentStyle={{fontSize:'12pt'}} label="國籍">馬來西亞</Descriptions.Item>
+            <Descriptions.Item labelStyle={{fontSize:'12pt'}} span={2} contentStyle={{fontSize:'12pt'}} label="學歷">國立成功大學資訊管理學系</Descriptions.Item>
+            <Descriptions.Item labelStyle={{fontSize:'12pt'}} contentStyle={{fontSize:'12pt'}} label="專長">全端網頁工程師</Descriptions.Item>
+            <Descriptions.Item labelStyle={{fontSize:'12pt'}} contentStyle={{fontSize:'12pt'}} label="電郵">chanzihang0311@gmail.com</Descriptions.Item>
           </Descriptions>
           <Descriptions className="p-2 mt-3" title={<Title level={3}>自傳</Title>}>
-            <Descriptions.Item labelStyle={{fontSize:'14pt'}} contentStyle={{fontSize:'14pt'}}>我是一位全端工程師，畢業於國立成功大學資訊管理學系，熱愛學習新技術，並且喜歡挑戰自己。</Descriptions.Item>
+            <Descriptions.Item labelStyle={{fontSize:'12pt'}} contentStyle={{fontSize:'12pt'}}>我是一位全端工程師，目前於國立成功大學資訊管理學系攻讀碩士，熱愛學習新技術，並且喜歡挑戰自己。</Descriptions.Item>
           </Descriptions>
           <Descriptions className="p-2 mt-3" title={<Title level={3}>技術</Title>}>
-            <Descriptions.Item labelStyle={{fontSize:'14pt'}} contentStyle={{fontSize:'14pt'}}>
+            <Descriptions.Item labelStyle={{fontSize:'12pt'}} contentStyle={{fontSize:'12pt'}}>
             <Flex gap="4px 0" wrap>
               {tech.map((item,index)=>(
                 <Tag key={index} color={item.color} className="px-3" >{item.name}</Tag>
