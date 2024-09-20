@@ -4,6 +4,7 @@ import './App.css';
 import About from './page/About';
 import Header from './page/Header';
 import Project from './page/Project';
+import Recommend from './page/Recommend';
 function App() {
 
   return (
@@ -11,6 +12,7 @@ function App() {
     <Header />
     <div id='body'>
       <About />
+      <Recommend />
       <Project />
     </div>
     <Tooltip title='回到頂部'>

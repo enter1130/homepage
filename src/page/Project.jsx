@@ -1,4 +1,5 @@
-import { Divider } from "antd";
+import { Button, Card, Carousel, Divider } from "antd";
+import Title from "antd/es/typography/Title";
 
 function Project() {
   const project=[
@@ -33,24 +34,28 @@ function Project() {
     }
   ]
 
-  const contentStyle = {
-    height: '160px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
-  };
   return (
     <div className='p-3 ' style={{minHeight:'500px'}}>
-      <Divider orientation="left"><h1>Project</h1></Divider>
-      {/* <Carousel autoplay>
+      <Divider orientation="left"><h1>作品集</h1></Divider>
+      <Carousel dots arrows autoplay>
         {project.map((item, index) => (
-          <div style={contentStyle} className="border rounded" key={index}>
-            <h3>{item.name}</h3>
-            <a href={item.website} target="_blank" rel="noreferrer">前往網站</a>
+          <div key={index} className="d-flex justify-content-center align-items-center">
+            <Card style={{height:'400px',width:'90%',margin:'50px',
+              // backgroundImage:'url(https://picsum.photos/3000/2000)',backgroundRepeat:'no-repeat',backgroundPosition:'center',backgroundSize:'cover'
+              }} className="border rounded">
+                <Card.Meta
+                  description={<div className="p-3 d-flex justify-content-end align-items-end">
+                    <div className="text-end">
+                      <Title level={1}>{item.name}</Title>
+                      <div className="my-3">{item.type}</div>
+                      <Button href={item.website} style={{textDecoration:'none'}} type={'primary'} target="_blank" rel="noreferrer">前往網站</Button>
+                    </div>
+                  </div>}
+                />
+            </Card>
           </div>
         ))}
-      </Carousel> */}
+      </Carousel>
     </div>
   )
 }

@@ -1,11 +1,13 @@
+import { Result } from "antd"
 
 
 function Navigation() {
 
   return (
-    <nav className='bg-dark p-3'>
-
-    </nav>
+    <Result
+    status={'info'}
+    title={'建置中'}
+    />
   )
 }
 
